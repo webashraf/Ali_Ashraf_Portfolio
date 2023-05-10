@@ -8,11 +8,11 @@ import banner6 from "../../../assets/images/banner/6.jpg";
 
 const Banner = () => {
   return (
-    <div className="carousel w-full">
+    <div className="carousel w-full h-[600px] rounded-md overflow-hidden">
       <div id="slide1" className="carousel-item relative w-full ">
         <img src={banner1} className="w-full" />
         <div className="absolute flex items-center px-14 gap-6 left-0 right-0 bottom-0 top-0 my-auto text-white h-full bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">
-          <div className="w-1/2 flex flex-col justify-center gap-6">
+          <div className="w-1/2 space-y-5">
             <h1 className="text-6xl font-bold">
               Affordable Price For Car Servicing
             </h1>
