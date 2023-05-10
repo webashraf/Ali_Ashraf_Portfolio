@@ -5,14 +5,14 @@ const Services = () => {
   const [services, setServices] = useState([]);
 
   useEffect(() => {
-    fetch("./services.json")
+    fetch("http://localhost:5000/services")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
   console.log(services);
   return (
-    <>
-      <div className="text-center w-1/2 mx-auto">
+    <div className="py-36">
+      <div className="text-center w-1/2 mx-auto pb-24">
         <h3 className="text-xl font-bold text-orange-400">Services</h3>
         <h1 className="text-5xl font-bold">Our Service Area </h1>
         <p className="py-6">
@@ -25,7 +25,7 @@ const Services = () => {
           <ServiceCard key={service._id} service={service}></ServiceCard>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 
