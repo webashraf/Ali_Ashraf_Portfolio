@@ -1,43 +1,38 @@
 import { RiChatDeleteFill } from "react-icons/ri";
 import Swal from "sweetalert2";
 
-const OrdersTable = ({ orders, setDeleteLoader, deleteLodaer }) => {
-  const {_id, img, title, email, price, date } = orders;
-  console.log(orders);
+const OrdersTable = ({
+  orders,
+  setDeleteLoader,
+  deleteLodaer,
+  handelBooking,
+}) => {
+  const { _id, img, title, email, price, date, status } = orders;
+  //   console.log(orders);
 
-  const handleDelete = (id) =>{
+  const handleDelete = (id) => {
     Swal.fire({
-        title: 'Are you sure?',
-        text: "You won't be able to revert this!",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, delete it!'
-      }).then((result) => {
-        if (result.isConfirmed) {
-          Swal.fire(
-            'Deleted!',
-            'Your order has been deleted.',
-            'success'
-          )
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire("Deleted!", "Your order has been deleted.", "success");
 
         fetch(`http://localhost:5000/order/${id}`, {
-            method: "DELETE"
+          method: "DELETE",
         })
-        .then(res => res.json())
-        .then(data => setDeleteLoader(!deleteLodaer))
+          .then((res) => res.json())
+          .then((data) => setDeleteLoader(!deleteLodaer));
 
         // console.log(id);
-        }
-      })
-      
-
-  }
-
-
-
-
+      }
+    });
+  };
 
   return (
     <>
@@ -62,10 +57,18 @@ const OrdersTable = ({ orders, setDeleteLoader, deleteLodaer }) => {
         </td>
 
         <td> ${price}</td>
+        <td>{date}</td>
         <th>
-          <button className="btn btn-ghost btn-xs bg-orange-600 text-white">
-            details
-          </button>
+          {status === "confirm" ? (
+            <span className="text-green-700 font-semibold">Confirmed</span>
+          ) : (
+            <button
+              onClick={() => handelBooking(_id)}
+              className="btn btn-ghost btn-xs bg-orange-600 text-white"
+            >
+              Please confirm
+            </button>
+          )}
         </th>
       </tr>
     </>

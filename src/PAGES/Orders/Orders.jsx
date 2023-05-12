@@ -12,7 +12,27 @@ const Orders = () => {
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, [deleteLodaer]);
-  console.log(orders);
+
+  const handelBooking = (id) =>{
+        fetch(`http://localhost:5000/order/${id}`, {
+            method: "PATCH",
+            headers: {
+                "content-type" : "application/json"
+            },
+            body: JSON.stringify({status: 'confirm'})
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+        });
+        const remaining = orders.filter(order=> order._id !== id);
+        const updated = orders.find(order => order._id === id);
+        updated.status = "confirm"
+        setOrders([updated, ...remaining]);
+  }
+
+console.log(orders);
+
   return (
     <>
     {
@@ -22,7 +42,7 @@ const Orders = () => {
         <table className="table w-full">
           <tbody>
             {orders.map((order) => (
-              <OrdersTable key={order._id} orders={order} setDeleteLoader={setDeleteLoader} deleteLodaer={deleteLodaer}></OrdersTable>
+              <OrdersTable key={order._id} orders={order} setDeleteLoader={setDeleteLoader} deleteLodaer={deleteLodaer} handelBooking={handelBooking}></OrdersTable>
             ))}
           </tbody>
         </table>
