@@ -1,8 +1,16 @@
-import React from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.svg";
+import { AuthContext } from "../firebase/AuthProvider/AuthProvider";
 
 const NavBar = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then((result) => {})
+      .catch((error) => {});
+  };
   const menu_list = (
     <>
       <li>
@@ -11,6 +19,19 @@ const NavBar = () => {
       <li>
         <Link to={"/about"}>About</Link>
       </li>
+      {!user ? (
+        <li>
+          <Link to={"/login"}>Log In</Link>
+        </li>
+      ) : (
+        <>
+        <li><Link to={"/orders"}>Orders</Link></li>
+        <li>{user.email}</li>
+          <li onClick={handleLogOut}>
+            <button>Log Out</button>
+          </li>
+        </>
+      )}
     </>
   );
   return (
@@ -40,7 +61,9 @@ const NavBar = () => {
             {menu_list}
           </ul>
         </div>
-        <Link to={"/"}><img src={logo} alt="" /></Link>
+        <Link to={"/"}>
+          <img src={logo} alt="" />
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{menu_list}</ul>
