@@ -8,7 +8,12 @@ const Orders = () => {
   const [deleteLodaer, setDeleteLoader] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/order?email=${user?.email}`)
+    fetch(`http://localhost:5000/order?email=${user?.email}`, {
+      method:  "GET",
+      headers: {
+        authorization : `Bearer ${localStorage.getItem("car-access-token")}`
+      }
+    })
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, [deleteLodaer]);
@@ -35,9 +40,7 @@ console.log(orders);
 
   return (
     <>
-    {
-        orders.length
-    }
+
       <div className="overflow-x-auto w-full">
         <table className="table w-full">
           <tbody>

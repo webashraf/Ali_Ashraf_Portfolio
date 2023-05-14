@@ -20,7 +20,7 @@ const AuthProvider = ({ children }) => {
   }
 
   const logOut = () =>{
-    signOut(auth);
+    return signOut(auth);
   }
 
 
@@ -38,6 +38,24 @@ const AuthProvider = ({ children }) => {
         // console.log(currentUser);
         setUser(currentUser);
         setLoading(false);
+        if (currentUser.email) {
+          const logedInUser = {
+            email: currentUser.email
+          }
+          fetch("http://localhost:5000/jwt", {
+            method: "POST",
+            headers: {
+              "content-type": "application/json",
+            },
+            body: JSON.stringify(logedInUser),
+          })
+            .then((res) => res.json())
+            .then((data) => {
+              console.log("JWT RESPONSE", data);
+              localStorage.setItem("car-access-token", data.token);
+            });
+
+        }
     });
     return () => {
         return unsubscribe();

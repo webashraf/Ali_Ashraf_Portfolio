@@ -4,10 +4,10 @@ import { AuthContext } from "../../firebase/AuthProvider/AuthProvider";
 
 const CheckOut = () => {
   const service = useLoaderData();
-  console.log(service);
+  // console.log(service);
   const { price, service_id, img, title } = service;
   const {user} = useContext(AuthContext);
-  console.log(user?.email);
+  // console.log(user?.email);
 
   const handleCheckOutForm = (event) => {
     event.preventDefault();

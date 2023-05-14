@@ -1,32 +1,35 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "../../assets/images/login/login.svg";
 import { AuthContext } from "../../firebase/AuthProvider/AuthProvider";
 
 const Login = () => {
-    const {signInUser} = useContext(AuthContext)
-    const handleLogin = event =>{
-        event.preventDefault();
+  const { signInUser } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
+  // console.log(location.state.from.pathname);
 
-        const form = event.target;
-        const email = form.email.value;
-        const pass = form.password.value;
+  const from = location.state?.from?.pathname || "/";
 
-        signInUser(email, pass)
-        .then(result => {
-          const user = result.user;
-          console.log(user);
-        })
-        .catch(error => {
-          console.log(error);
-        })
+  const handleLogin = (event) => {
+    event.preventDefault();
 
-        console.log(email, pass);
-    }
+    const form = event.target;
+    const email = form.email.value;
+    const pass = form.password.value;
 
+    signInUser(email, pass)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        navigate(from, { replace: true });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
 
-
-
+    // console.log(email, pass);
+  };
 
   return (
     <div className="hero min-h-screen bg-base-200">
@@ -69,7 +72,12 @@ const Login = () => {
             </div>
           </form>
 
-          <p>Are you new here <Link to={"/register"} className="text-orange-500">register now.</Link></p>
+          <p>
+            Are you new here{" "}
+            <Link to={"/register"} className="text-orange-500">
+              register now.
+            </Link>
+          </p>
         </div>
       </div>
     </div>

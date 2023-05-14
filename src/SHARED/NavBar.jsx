@@ -8,8 +8,11 @@ const NavBar = () => {
 
   const handleLogOut = () => {
     logOut()
-      .then((result) => {})
-      .catch((error) => {});
+    .then(() => {
+        // localStorage.removeItem("car-access-token");
+        localStorage.removeItem("car-access-token");
+    })
+    .catch((error) => console.log(error));
   };
   const menu_list = (
     <>
@@ -25,8 +28,10 @@ const NavBar = () => {
         </li>
       ) : (
         <>
-        <li><Link to={"/orders"}>Orders</Link></li>
-        <li>{user.email}</li>
+          <li>
+            <Link to={"/orders"}>Orders</Link>
+          </li>
+          <li>{user.email}</li>
           <li onClick={handleLogOut}>
             <button>Log Out</button>
           </li>
