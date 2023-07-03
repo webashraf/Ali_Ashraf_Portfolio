@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import logo from "../../assets/images/login/login.svg";
+
 import { AuthContext } from "../../firebase/AuthProvider/AuthProvider";
 
 const Login = () => {

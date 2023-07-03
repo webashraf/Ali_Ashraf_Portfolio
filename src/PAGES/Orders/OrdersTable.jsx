@@ -23,7 +23,7 @@ const OrdersTable = ({
       if (result.isConfirmed) {
         Swal.fire("Deleted!", "Your order has been deleted.", "success");
 
-        fetch(`http://localhost:5000/order/${id}`, {
+        fetch(`https://car-doctor-server-pink.vercel.app/order/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

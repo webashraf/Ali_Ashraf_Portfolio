@@ -1,0 +1,7 @@
+.project-cart-parent .card {
+    transition: box-shadow 0.3s ease;
+  }
+.project-cart-parent .card:hover{
+    box-shadow: 0px 8px 15px 3px #6ceafd;
+    animation-duration: ms;
+}

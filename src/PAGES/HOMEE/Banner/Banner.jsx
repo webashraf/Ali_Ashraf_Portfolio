@@ -1,99 +1,48 @@
-import React from "react";
-import banner1 from "../../../assets/images/banner/1.jpg";
-import banner2 from "../../../assets/images/banner/2.jpg";
-import banner3 from "../../../assets/images/banner/3.jpg";
-import banner4 from "../../../assets/images/banner/4.jpg";
-import banner5 from "../../../assets/images/banner/5.jpg";
-import banner6 from "../../../assets/images/banner/6.jpg";
-
+import Wave from "react-wavify";
+import ali_ashraf from "/public/ali_ashraf.png";
+import {
+  FaDownload
+} from "react-icons/fa";
+import resume from "../../../assets/resume/Resume_of_Ali_Ashraf.pdf"
 const Banner = () => {
   return (
-    <div className="carousel w-full h-[600px] rounded-md overflow-hidden">
-      <div id="slide1" className="carousel-item relative w-full ">
-        <img src={banner1} className="w-full" />
-        <div className="absolute flex items-center px-14 gap-6 left-0 right-0 bottom-0 top-0 my-auto text-white h-full bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">
-          <div className="w-1/2 space-y-5">
-            <h1 className="text-6xl font-bold">
-              Affordable Price For Car Servicing
-            </h1>
-            <p>
-              There are many variations of passages of available, but the
-              majority have suffered alteration in some form
-            </p>
-            <div className="flex gap-6">
-              <button className="btn bg-[#FF3811] border-[#FF3811]">
-                Discover more
-              </button>
-              <button className="btn btn-outline glass text-white">
-                Discover more
-              </button>
-            </div>
-          </div>
-        </div>
-        <div className="absolute flex justify-end gap-6 transform -translate-y-1/2 left-5 right-24 bottom-16">
-          <a
-            href="#slide4"
-            className="btn btn-circle bg-[#FF3811] border-[#FF3811]"
-          >
-            ❮
-          </a>
-          <a
-            href="#slide2"
-            className="btn btn-circle bg-[#FF3811] border-[#FF3811]"
-          >
-            ❯
-          </a>
+    <div className="flex flex-col justify-center items-center text-center w-full py-10 rounded-md overflow-hidden text-white">
+      <div className="mx-auto relative rounded-full border-4 border-lime-500 h-[300px] w-[300px] overflow-hidden mb-10">
+        <img className="w-[300px] absolute z-10" src={ali_ashraf} alt="" />
+        <div className="absolute bottom-20">
+          <Wave mask="url(#mask)" fill="#1277b0">
+            <defs>
+              <linearGradient id="gradient" gradientTransform="rotate(90)">
+                <stop offset="0" stopColor="white" />
+                <stop offset="0.5" stopColor="black" />
+              </linearGradient>
+              <mask id="mask">
+                <rect
+                  x="0"
+                  y="0"
+                  width="2000"
+                  height="200"
+                  fill="url(#gradient)"
+                />
+              </mask>
+            </defs>
+          </Wave>
         </div>
       </div>
-      <div id="slide2" className="carousel-item relative w-full">
-        <img src={banner2} className="w-full" />
-        <div className="absolute flex justify-end gap-6 transform -translate-y-1/2 left-5 right-24 bottom-16">
-          <a
-            href="#slide1"
-            className="btn btn-circle bg-[#FF3811] border-[#FF3811]"
-          >
-            ❮
-          </a>
-          <a
-            href="#slide3"
-            className="btn btn-circle bg-[#FF3811] border-[#FF3811]"
-          >
-            ❯
-          </a>
-        </div>
-      </div>
-      <div id="slide3" className="carousel-item relative w-full">
-        <img src={banner3} className="w-full" />
-        <div className="absolute flex justify-end gap-6 transform -translate-y-1/2 left-5 right-24 bottom-16">
-          <a
-            href="#slide2"
-            className="btn btn-circle bg-[#FF3811] border-[#FF3811]"
-          >
-            ❮
-          </a>
-          <a
-            href="#slide4"
-            className="btn btn-circle bg-[#FF3811] border-[#FF3811]"
-          >
-            ❯
-          </a>
-        </div>
-      </div>
-      <div id="slide4" className="carousel-item relative w-full">
-        <img src={banner4} className="w-full" />
-        <div className="absolute flex justify-end gap-6 transform -translate-y-1/2 left-5 right-24 bottom-16">
-          <a
-            href="#slide3"
-            className="btn btn-circle bg-[#FF3811] border-[#FF3811]"
-          >
-            ❮
-          </a>
-          <a
-            href="#slide1"
-            className="btn btn-circle bg-[#FF3811] border-[#FF3811]"
-          >
-            ❯
-          </a>
+      <div className="w-1/2">
+        <h1 className="text-7xl font-serif uppercase">Ali Ashraf</h1>
+        <h3 className="text-5xl font-bold text-white-100">React Developer</h3>
+        <p className="text-xs mt-5 px-20">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam hic
+          tenetur odit deleniti maiores? Voluptatibus, modi rem libero dolore
+          quia nulla quibusdam iste hic, unde, fugiat corrupti? Numquam enim
+          aspernatur molestiae quibusdam, ipsam corporis, totam necessitatibus
+          porro, sunt ea accusamus quos deserunt. Deserunt, tempore beatae qui
+          ea maxime praesentium doloremque!
+        </p>
+        <div className="space-x-1 mt-5 ">
+          <button className="btn btn-sm btn-outline text-white">see resume</button>
+          <a style={{textDecoration: "none"}} className="" href={resume} download><button className="btn btn-sm btn-outline text-white">download resume &nbsp; <FaDownload> </FaDownload> </button></a>
         </div>
       </div>
     </div>

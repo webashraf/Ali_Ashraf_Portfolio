@@ -8,7 +8,7 @@ const Orders = () => {
   const [deleteLodaer, setDeleteLoader] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/order?email=${user?.email}`, {
+    fetch(`https://car-doctor-server-pink.vercel.app/order?email=${user?.email}`, {
       method:  "GET",
       headers: {
         authorization : `Bearer ${localStorage.getItem("car-access-token")}`
@@ -19,7 +19,7 @@ const Orders = () => {
   }, [deleteLodaer]);
 
   const handelBooking = (id) =>{
-        fetch(`http://localhost:5000/order/${id}`, {
+        fetch(`https://car-doctor-server-pink.vercel.app/order/${id}`, {
             method: "PATCH",
             headers: {
                 "content-type" : "application/json"

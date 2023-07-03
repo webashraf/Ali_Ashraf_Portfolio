@@ -1,0 +1,15 @@
+.skill-itmes div{
+    /* border: 1px solid ; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 0;
+    position: relative;
+}
+.skill-itmes img{
+    width: 100px;
+}
+.skill-itmes div div {
+    position: absolute;
+}

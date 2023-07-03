@@ -1,80 +1,73 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
-import logo from "../assets/logo.svg";
+import { BiCertification, BiHome, BiMailSend, BiPaperPlane } from "react-icons/bi";
+import { BsFileEarmarkPerson } from "react-icons/bs";
+import { FaDownload, FaFacebook, FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { AuthContext } from "../firebase/AuthProvider/AuthProvider";
+import "./Navbar.css";
+
 
 const NavBar = () => {
-  const { user, logOut } = useContext(AuthContext);
 
-  const handleLogOut = () => {
-    logOut()
-    .then(() => {
-        // localStorage.removeItem("car-access-token");
-        localStorage.removeItem("car-access-token");
-    })
-    .catch((error) => console.log(error));
-  };
-  const menu_list = (
+  const menu = (
     <>
-      <li>
-        <Link to={"/"}>Home</Link>
-      </li>
-      <li>
-        <Link to={"/about"}>About</Link>
-      </li>
-      {!user ? (
-        <li>
-          <Link to={"/login"}>Log In</Link>
-        </li>
-      ) : (
-        <>
-          <li>
-            <Link to={"/orders"}>Orders</Link>
-          </li>
-          <li>{user.email}</li>
-          <li onClick={handleLogOut}>
-            <button>Log Out</button>
-          </li>
-        </>
-      )}
+      <a href="#home" className="flex gap-2 items-center">
+        <div className="">
+          <BiHome className="text-2xl" />
+        </div>
+        <span className="text-lg text-transparent bg-gradient-to-r from-[#91a1a4] to-[#8d999bcb] bg-clip-text">Home</span>
+      </a>  
+
+      <a href="#about" className="flex gap-2 items-center">
+        <div className="">
+          <BsFileEarmarkPerson className="text-2xl" />
+        </div>
+        <span className="text-lg text-transparent bg-gradient-to-r from-[#91a1a4] to-[#8d999bcb] bg-clip-text">About Me</span>
+      </a>  
+
+      <a href="#skills" className="flex gap-2 items-center">
+        <div className="">
+          <BiCertification className="text-2xl" />
+        </div>
+        <span className="text-lg text-transparent bg-gradient-to-r from-[#91a1a4] to-[#8d999bcb] bg-clip-text">Skills</span>
+      </a>  
+
+      <a href="#projects" className="flex gap-2 items-center">
+        <div className="">
+          <BiPaperPlane className="text-2xl" />
+        </div>
+        <span className="text-lg text-transparent bg-gradient-to-r from-[#91a1a4] to-[#8d999bcb] bg-clip-text">Projects</span>
+      </a>   
+
+      <a href="#contact" className="flex gap-2 items-center">
+        <div className="">
+          <BiMailSend className="text-2xl" />
+        </div>
+        <span className="text-lg text-transparent bg-gradient-to-r from-[#91a1a4] to-[#8d999bcb] bg-clip-text">Contact me</span>
+      </a>
     </>
   );
+
+  const socialMenus = (
+    <>
+      <li className="bg-[#5d8ee37c]"><FaLinkedinIn className="b-[#5d8ee3]"></FaLinkedinIn></li>
+
+      <li className="bg-[#2859ad82]"><FaTwitter></FaTwitter></li>
+
+      <li className="bg-[#e90d0d72]"><FaInstagram></FaInstagram></li>
+
+      <li className="bg-[#0460ff67]"><FaFacebook></FaFacebook></li>
+      <><button className="btn btn-outline btn-tiny text-sm flex gap-1 items-center">resume <FaDownload></FaDownload> </button></>
+    </>
+  )
   return (
-    <div className="navbar bg-base-100 h-32 border-b border-b-black border-b-8">
-      <div className="navbar-start">
-        <div className="dropdown">
-          <label tabIndex={0} className="btn btn-ghost lg:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />
-            </svg>
-          </label>
-          <ul
-            tabIndex={0}
-            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
-          >
-            {menu_list}
+    <div className="navbar h-32 w-[300px]">
+      <div className="">
+      </div>
+      <div className="">
+
+        <ul className="header-menu-ul space-y-2 ml-5 mt-10">
+          {menu}
           </ul>
-        </div>
-        <Link to={"/"}>
-          <img src={logo} alt="" />
-        </Link>
-      </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{menu_list}</ul>
-      </div>
-      <div className="navbar-end">
-        <a className="btn btn-outline btn-warning">Appointment</a>
       </div>
     </div>
   );

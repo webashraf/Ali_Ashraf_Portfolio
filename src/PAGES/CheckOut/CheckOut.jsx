@@ -32,7 +32,7 @@ const CheckOut = () => {
     };
     console.log(userData);
 
-    fetch("http://localhost:5000/order", {
+    fetch("https://car-doctor-server-pink.vercel.app/order", {
       method: "post",
       headers: {
         "content-type": "application/json",

@@ -1,0 +1,14 @@
+.w-1\/2.contact-form input, .textarea {
+	border: none;
+	background-color: #1e1d1d9e;
+	border-radius: 0;
+	border-bottom: 2px solid cyan;
+	outline: 0 !important;
+}
+.btn.btn-info.send-btn {
+	background: #1e1d1d9e;
+	border: none;
+	border-bottom: 2px solid cyan;
+	border-radius: 0;
+	color: cyan;
+}
