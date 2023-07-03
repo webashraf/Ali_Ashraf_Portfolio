@@ -10,23 +10,21 @@ import bootstrap from "../../../assets/images/skills/bootstrap.png";
 import "./skill.css";
 import Wave from "react-wavify";
 
-
 const Services = () => {
   // console.log(services);
   return (
     <div className="py-36">
       <div className="text-center w-1/2 mx-auto pb-24 text-white-100">
-        <h3 className="text-xl font-bold text-orange-400">
-          Excellence in Expertise
+        <h3 className="text-xl font-bold text-zinc-500">
+          Skills & Expertise{" "}
         </h3>
-        <h1 className="text-5xl font-bold">
-          Unleashing Proven Proficiency and Professionalism
+        <h1 className="text-5xl font-bold text-cyan-500">
+          Tools and Technologies I Work With{" "}
         </h1>
       </div>
 
       <div className="flex">
         <div className="skill-itmes px-8 w-1/2 grid grid-cols-2 gap-5">
-
           <div className="shadow-2xl shadow-orange-70">
             <img src={git} alt="" />
             <h3 className="text-orange-700 ">Git Hub</h3>
@@ -238,7 +236,6 @@ const Services = () => {
               </defs>
             </Wave>
           </div>
-
         </div>
         <div className="w-1/2"></div>
       </div>

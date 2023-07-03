@@ -2,23 +2,19 @@ import { useState } from "react";
 import summerCamp from "../../../assets/images/projects/Summer_Sports_Excellence1.png";
 import VroomVroomPlayHome from "../../../assets/images/projects/VroomVroomPlayHome.png";
 import flavorLav from "../../../assets/images/projects/FlavorLav.png";
-import "./style.css"
+import "./style.css";
 
 const Projects = () => {
-
   return (
     <div className="py-36">
       <div className="text-center w-1/2 mx-auto pb-24 text-white-100">
-        <h3 className="text-xl font-bold text-zinc-500">
-          Excellence in Expertise
-        </h3>
+        <h3 className="text-xl font-bold text-zinc-500">Project Gallery </h3>
         <h1 className="text-5xl font-bold text-cyan-500">
-          Unleashing Proven Proficiency and Professionalism
+          Explore My Latest Works and Creations{" "}
         </h1>
       </div>
 
       <div className="grid grid-cols-3 px-10 project-cart-parent">
-
         <div className="card w-96 bg-[#0f06066c] shadow-md shadow-[#419fae]">
           <figure className="h-[200px] overflow-hidden">
             <img
@@ -35,7 +31,8 @@ const Projects = () => {
                 Implement three dashboard for admin, instructor, and student.
               </li>
               <li>
-                An admin can Approve, remove, give feedback, assign rules. Instructor: Add classes. User: Select, purchase courses.
+                An admin can Approve, remove, give feedback, assign rules.
+                Instructor: Add classes. User: Select, purchase courses.
               </li>
               <li>
                 Course select button disabled when seat is below 1. And scroll
@@ -43,10 +40,29 @@ const Projects = () => {
               </li>
             </ul>
             <p>
-            <span className="font-bold">Links:</span> <a target="_" href="https://github.com/webashraf/summer-sports-excellence-">Clinet Side Code</a>, <a target="_" href="https://github.com/webashraf/summer-sports-excellence-server">Clinet Side Code</a>, <a target="_" href="https://a12-summer-camp.web.app/">Live Link</a>
+              <span className="font-bold">Links:</span>{" "}
+              <a
+                target="_"
+                href="https://github.com/webashraf/summer-sports-excellence-"
+              >
+                Clinet Side Code
+              </a>
+              ,{" "}
+              <a
+                target="_"
+                href="https://github.com/webashraf/summer-sports-excellence-server"
+              >
+                Clinet Side Code
+              </a>
+              ,{" "}
+              <a target="_" href="https://a12-summer-camp.web.app/">
+                Live Link
+              </a>
             </p>
             <div className="card-actions justify-end">
-              <button className="btn btn-sm disabled: text-gray-400 line-through">See Details</button>
+              <button className="btn btn-sm disabled: text-gray-400 line-through">
+                See Details
+              </button>
             </div>
           </div>
         </div>
@@ -67,7 +83,8 @@ const Projects = () => {
                 Implement three dashboard for admin, instructor, and student.
               </li>
               <li>
-                An admin can Approve, remove, give feedback, assign rules. Instructor: Add classes. User: Select, purchase courses.
+                An admin can Approve, remove, give feedback, assign rules.
+                Instructor: Add classes. User: Select, purchase courses.
               </li>
               <li>
                 Course select button disabled when seat is below 1. And scroll
@@ -75,10 +92,29 @@ const Projects = () => {
               </li>
             </ul>
             <p>
-            <span className="font-bold">Links:</span> <a target="_" href="https://github.com/webashraf/summer-sports-excellence-">Clinet Side Code</a>, <a target="_" href="https://github.com/webashraf/summer-sports-excellence-server">Clinet Side Code</a>, <a target="_" href="https://a12-summer-camp.web.app/">Live Link</a>
+              <span className="font-bold">Links:</span>{" "}
+              <a
+                target="_"
+                href="https://github.com/webashraf/summer-sports-excellence-"
+              >
+                Clinet Side Code
+              </a>
+              ,{" "}
+              <a
+                target="_"
+                href="https://github.com/webashraf/summer-sports-excellence-server"
+              >
+                Clinet Side Code
+              </a>
+              ,{" "}
+              <a target="_" href="https://a12-summer-camp.web.app/">
+                Live Link
+              </a>
             </p>
             <div className="card-actions justify-end">
-              <button className="btn btn-sm disabled: text-gray-400 line-through">See Details</button>
+              <button className="btn btn-sm disabled: text-gray-400 line-through">
+                See Details
+              </button>
             </div>
           </div>
         </div>
@@ -99,7 +135,8 @@ const Projects = () => {
                 Implement three dashboard for admin, instructor, and student.
               </li>
               <li>
-                An admin can Approve, remove, give feedback, assign rules. Instructor: Add classes. User: Select, purchase courses.
+                An admin can Approve, remove, give feedback, assign rules.
+                Instructor: Add classes. User: Select, purchase courses.
               </li>
               <li>
                 Course select button disabled when seat is below 1. And scroll
@@ -107,15 +144,32 @@ const Projects = () => {
               </li>
             </ul>
             <p>
-            <span className="font-bold">Links:</span> <a target="_" href="https://github.com/webashraf/summer-sports-excellence-">Clinet Side Code</a>, <a target="_" href="https://github.com/webashraf/summer-sports-excellence-server">Clinet Side Code</a>, <a target="_" href="https://a12-summer-camp.web.app/">Live Link</a>
+              <span className="font-bold">Links:</span>{" "}
+              <a
+                target="_"
+                href="https://github.com/webashraf/summer-sports-excellence-"
+              >
+                Clinet Side Code
+              </a>
+              ,{" "}
+              <a
+                target="_"
+                href="https://github.com/webashraf/summer-sports-excellence-server"
+              >
+                Clinet Side Code
+              </a>
+              ,{" "}
+              <a target="_" href="https://a12-summer-camp.web.app/">
+                Live Link
+              </a>
             </p>
             <div className="card-actions justify-end">
-              <button className="btn btn-sm disabled: text-gray-400 line-through">See Details</button>
+              <button className="btn btn-sm disabled: text-gray-400 line-through">
+                See Details
+              </button>
             </div>
           </div>
         </div>
-
-
       </div>
     </div>
   );
