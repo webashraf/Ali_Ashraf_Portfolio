@@ -6,7 +6,7 @@ import "./style.css";
 
 const Projects = () => {
   return (
-    <div className="py-36">
+    <div className="lg:py-20 py-10">
       <div className="text-center lg:w-1/2 mx-auto pb-24 text-white-100">
         <h3 className="text-xl font-bold text-zinc-500">Project Gallery </h3>
         <h1 className="text-5xl font-bold text-cyan-500">

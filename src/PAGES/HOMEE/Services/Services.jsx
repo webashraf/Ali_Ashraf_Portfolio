@@ -33,7 +33,7 @@ const Services = () => {
         </h1>
       </div>
 
-      <div className="lg:flex lg:items-center">
+      <div className="lg:flex lg:items-center space-y-20 lg:space-y-0">
         <div className="skill-itmes px-8 lg:w-1/2 grid grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="shadow-2xl shadow-[#ff2f00]">
             <img src={git} alt="" />

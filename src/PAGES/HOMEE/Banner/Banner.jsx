@@ -4,6 +4,8 @@ import { FaDownload } from "react-icons/fa";
 import resume from "../../../assets/resume/Resume_of_Ali_Ashraf.pdf";
 import Lottie from "react-lottie";
 import animationData from "/public/a2.json";
+import "./Banner.css";
+import { TypeAnimation } from "react-type-animation";
 const Banner = () => {
   const defaultOptions = {
     loop: true,
@@ -47,7 +49,27 @@ const Banner = () => {
 
         <div className=" text-left">
           <h1 className="text-7xl font-serif uppercase">Ali Ashraf</h1>
-          <h3 className="text-5xl font-bold text-white-100">React Developer</h3>
+          {/* <h3 className="text-5xl font-bold text-white-100">React Developer</h3> */}
+          <TypeAnimation
+            sequence={[
+              "React Developer", // Types 'One'
+              1000, // Waits 1s
+              "Frontend Developer", // Deletes 'One' and types 'Two'
+              2000, // Waits 2s
+              // Types 'Three' without deleting 'Two'
+              () => {
+                console.log("Sequence completed");
+              },
+            ]}
+            wrapper="span"
+            cursor={true}
+            repeat={Infinity}
+            style={{
+              fontSize: "3rem",
+              display: "inline-block",
+              fontWeight: "bold",
+            }}
+          />
           <p className="text-xs mt-5 lg:w-1/2 font-mono">
             Welcome to my portfolio! I'm Ali Ashraf, a passionate MERN Developer
             specializing in impactful digital experiences. Let's collaborate to
@@ -73,7 +95,7 @@ const Banner = () => {
       <div className="lg:w-1/2">
         {" "}
         <div className=" lg:hidden w-[100%] h-auto">
-        <Lottie options={defaultOptions} />
+          <Lottie options={defaultOptions} />
         </div>
         <div className="hidden lg:block">
           {" "}

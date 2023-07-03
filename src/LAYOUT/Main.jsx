@@ -76,7 +76,7 @@ const Main = () => {
         </div>
       </div>
       <div className="lg:hidden">
-        <div className="w-[90%] fixed lg:hidden bottom-0 bg-zinc-800 z-50 py-2 left-0 right-0 mx-auto">
+        <div className="w-[90%] fixed lg:hidden bg-[#343434eb] z-50 py-2 left-0 right-0 bottom-3 mx-auto shadow-2xl shadow-cyan-500">
           <MobileNavbar></MobileNavbar>
         </div>
       </div>

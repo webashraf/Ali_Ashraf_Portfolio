@@ -2,7 +2,7 @@ import ali_ashraf from "/public/ali_ashraf.png";
 
 const About = () => {
   return (
-    <div className="hero min-h-screen mt-20 lg:mt-0">
+    <div className="hero min-h-screen mt-28 lg:mt-0">
       <div className="hero-content gap-12 lg:gap-0 flex-col lg:flex-row lg:px-16">
         <div className="lg:w-1/2 relative">
           <img

@@ -30,8 +30,8 @@ const Contact = () => {
       );
   };
   return (
-    <div>
-      <div className="text-center lg:w-1/2 mx-auto pb-24 text-white-100">
+    <div className="py-36">
+      <div className="text-center lg:w-1/2 mx-auto lg:pb-24 text-white-100">
         <h3 className="text-xl font-bold text-zinc-500 ">
           Have a project on Mind?
         </h3>
@@ -40,7 +40,7 @@ const Contact = () => {
         </h1>
       </div>
 
-      <div className="lg:flex items-center flex-row-reverse lg:px-20 shadow-2xl shadow-cyan-400 mb-36 lg:mx-20">
+      <div className="lg:flex items-center flex-row-reverse lg:px-20 shadow-2xl shadow-cyan-400 lg:mb-3 lg:mx-20">
         <div className="lg:w-1/2 contact-form">
           <form
             ref={form}
