@@ -13,11 +13,20 @@
     padding-bottom: 4px;
 }
 
-
+.header-menu-ul li > a {
+  background-image: linear-gradient(to right, #78878A84, #8d999bcb);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+  padding-bottom: 4px;
+}
 .MobileNavbar-social-meuns li {
   /* font-size: 10px; */
   padding: 3px;
   color: #fff;
   border-radius: 2px;
   border: 1px solid #8d999b48;
+}
+.MobileNavbar-menu-ul a{
+  text-decoration: none !important;
 }

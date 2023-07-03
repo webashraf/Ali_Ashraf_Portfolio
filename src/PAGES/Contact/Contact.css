@@ -1,8 +1,8 @@
-.w-1\/2.contact-form input, .textarea {
-	border: none;
-	background-color: #1e1d1d9e;
-	border-radius: 0;
-	border-bottom: 2px solid cyan;
+.contact-form input, .textarea {
+	border: none !important;
+	background-color: #1e1d1d9e !important;
+	border-radius: 0 !important;
+	border-bottom: 2px solid cyan !important;
 	outline: 0 !important;
 }
 .btn.btn-info.send-btn {

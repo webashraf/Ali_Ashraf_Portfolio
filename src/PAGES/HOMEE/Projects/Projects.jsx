@@ -7,22 +7,24 @@ import "./style.css";
 const Projects = () => {
   return (
     <div className="py-36">
-      <div className="text-center w-1/2 mx-auto pb-24 text-white-100">
+      <div className="text-center lg:w-1/2 mx-auto pb-24 text-white-100">
         <h3 className="text-xl font-bold text-zinc-500">Project Gallery </h3>
         <h1 className="text-5xl font-bold text-cyan-500">
           Explore My Latest Works and Creations{" "}
         </h1>
       </div>
 
-      <div className="grid grid-cols-3 px-10 project-cart-parent">
-        <div className="card w-96 bg-[#0f06066c] shadow-md shadow-[#419fae]">
+      <div className="grid lg:grid-cols-3 lg:px-10 project-cart-parent space-y-20 lg:space-y-0">
+
+        <div className="card lg:w-96 bg-[#0f06066c] shadow-md shadow-[#419fae]">
           <figure className="h-[200px] overflow-hidden">
             <img
-              className="transition-transform duration-[4000ms] ease-in transform  translate-y-[550px] hover:translate-y-[-550px] object-top"
+              className="transition-transform duration-[4000ms] ease-in transform translate-y-[470px]  lg:translate-y-[550px] hover:translate-y-[-470px] lg:hover:translate-y-[-550px] object-top"
               src={summerCamp}
               alt="Shoes"
             />
           </figure>
+          
           <div className="card-body text-white">
             <h2 className="card-title">SUMMER SPORTS EXCELLENCE-</h2>
             <h4 className="font-bold uppercase">Features :</h4>
@@ -52,7 +54,7 @@ const Projects = () => {
                 target="_"
                 href="https://github.com/webashraf/summer-sports-excellence-server"
               >
-                Clinet Side Code
+                Server Side Code
               </a>
               ,{" "}
               <a target="_" href="https://a12-summer-camp.web.app/">
@@ -67,47 +69,45 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className="card w-96 bg-[#0f06066c] shadow-md shadow-[#419fae]">
+        <div className="card lg:w-96 bg-[#0f06066c] shadow-md shadow-[#419fae]">
           <figure className="h-[200px] overflow-hidden">
             <img
-              className="transition-transform duration-[4000ms] ease-in transform  translate-y-[720px] hover:translate-y-[-720px] object-top"
+              className="transition-transform duration-[4000ms] ease-in transform  translate-y-[610px] lg:translate-y-[720px] hover:translate-y-[-610px] lg:hover:translate-y-[-720px] object-top"
               src={VroomVroomPlayHome}
               alt="Shoes"
             />
           </figure>
           <div className="card-body text-white">
-            <h2 className="card-title">SUMMER SPORTS EXCELLENCE-</h2>
+            <h2 className="card-title">VroomVroomPlay-</h2>
             <h4 className="font-bold uppercase">Features :</h4>
             <ul className="ml-8 font-mono list-disc ">
               <li>
-                Implement three dashboard for admin, instructor, and student.
+                mplement firebase authentication like google, github, and
+                email/password authentication. And use private route.
               </li>
               <li>
-                An admin can Approve, remove, give feedback, assign rules.
-                Instructor: Add classes. User: Select, purchase courses.
+                You can add, update, delete and search for a toy. And awesome
+                slider, animation and responsive home page.
               </li>
               <li>
-                Course select button disabled when seat is below 1. And scroll
-                animation, cartoon animation, dark-light mood.
+                A beautiful car gallery has been added to the home page. Which
+                becomes a slider when you click on the image.
               </li>
             </ul>
             <p>
               <span className="font-bold">Links:</span>{" "}
-              <a
-                target="_"
-                href="https://github.com/webashraf/summer-sports-excellence-"
-              >
+              <a target="_" href="https://github.com/webashraf/vroomVroomPlay">
                 Clinet Side Code
               </a>
               ,{" "}
               <a
                 target="_"
-                href="https://github.com/webashraf/summer-sports-excellence-server"
+                href="https://github.com/webashraf/vroomVroomPlay_server"
               >
-                Clinet Side Code
+                Server Side Code
               </a>
               ,{" "}
-              <a target="_" href="https://a12-summer-camp.web.app/">
+              <a target="_" href="https://vroomvroomplay.web.app/">
                 Live Link
               </a>
             </p>
@@ -119,28 +119,28 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className="card w-96 bg-[#0f06066c] shadow-md shadow-[#419fae]">
+        <div className="card lg:w-96 bg-[#0f06066c] shadow-md shadow-[#419fae]">
           <figure className="h-[200px] obj overflow-hidden">
             <img
-              className="transition-transform duration-[4000ms] ease-in transform  translate-y-[390px] hover:translate-y-[-390px]"
+              className="transition-transform duration-[4000ms] ease-in transform translate-y-[330px] lg:translate-y-[390px] hover:translate-y-[-330px] lg:hover:translate-y-[-390px]"
               src={flavorLav}
               alt="Shoes"
             />
           </figure>
           <div className="card-body text-white">
-            <h2 className="card-title">SUMMER SPORTS EXCELLENCE-</h2>
+            <h2 className="card-title">FLAVOR LAV--</h2>
             <h4 className="font-bold uppercase">Features :</h4>
             <ul className="ml-8 font-mono list-disc ">
               <li>
-                Implement three dashboard for admin, instructor, and student.
+                Implement google, github, and email/password authentication
+                using firebase.
               </li>
               <li>
-                An admin can Approve, remove, give feedback, assign rules.
-                Instructor: Add classes. User: Select, purchase courses.
+                If a user clicks "view recipe" button without login, it will
+                redirect him to login page.
               </li>
               <li>
-                Course select button disabled when seat is below 1. And scroll
-                animation, cartoon animation, dark-light mood.
+                The blog download system and images have been used by LazyLoad.
               </li>
             </ul>
             <p>
